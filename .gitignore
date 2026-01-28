@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+backend/vendor/
+
+# Build Output
+dist/
+build/
+*.exe
+*.dll
+*.so
+*.dylib
+*.msi
+*.zip
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Config (Secrets)
+.env
+.env.local
+.env.production
+backend/data/OLD_config.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database/Data Storage
+installer/backend/data/
+installer/backend/logs/
+installer/pgsql/data/
+backend/data/
+backend/documents/
+
+# Installer Artifacts (HEAVY)
+installer/output/
+installer/tools/
+installer/backend/*.exe
+installer/pgsql/bin/
+installer/pgsql/lib/
+builder/
+
+# Specific large files seen in errors
+installer/srams-installer.iss
+installer/srams-postgres-installer.iss
+installer/postgresql-16.zip
+
+# Temporary
+.vs/
+.vscode/

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Secure Role-Based Audit Management System" />
+  <title>SRAMS Enterprise</title>
+  <style>
+    #global-error-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      color: #ff6b6b;
+      z-index: 99999;
+      padding: 40px;
+      font-family: monospace;
+      display: none;
+      overflow: auto;
+    }
+  </style>
+  <script>
+    window.onerror = function (msg, url, line, col, error) {
+      var overlay = document.getElementById('global-error-overlay');
+      if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'global-error-overlay';
+        document.body.appendChild(overlay);
+      }
+      overlay.style.display = 'block';
+      overlay.innerHTML += '<h3>Global Error Caught:</h3>' +
+        '<p>' + msg + '</p>' +
+        '<p>File: ' + url + ':' + line + ':' + col + '</p>' +
+        '<pre>' + (error && error.stack ? error.stack : 'No stack trace') + '</pre><hr>';
+      return false;
+    };
+
+    window.onunhandledrejection = function (event) {
+      var overlay = document.getElementById('global-error-overlay');
+      if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'global-error-overlay';
+        document.body.appendChild(overlay);
+      }
+      overlay.style.display = 'block';
+      overlay.innerHTML += '<h3>Unhandled Promise Rejection:</h3>' +
+        '<pre>' + (event.reason ? (event.reason.stack || event.reason) : 'Unknown reason') + '</pre><hr>';
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

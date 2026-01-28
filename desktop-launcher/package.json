@@ -1,0 +1,39 @@
+{
+    "name": "srams-admin-launcher",
+    "version": "1.0.0",
+    "description": "SRAMS Super Admin Desktop Launcher",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder --win portable",
+        "build:unpacked": "electron-builder --win --dir",
+        "build:installer": "electron-builder --win nsis"
+    },
+    "author": "SRAMS Development Team",
+    "license": "MIT",
+    "devDependencies": {
+        "electron": "^28.0.0",
+        "electron-builder": "^24.9.1"
+    },
+    "build": {
+        "appId": "com.srams.admin-launcher",
+        "productName": "SRAMS Admin",
+        "win": {
+            "target": [
+                "portable"
+            ],
+            "icon": "icon.ico"
+        },
+        "files": [
+            "main.js",
+            "preload.js",
+            "index.html",
+            "styles.css",
+            "renderer.js",
+            "app.manifest"
+        ],
+        "directories": {
+            "output": "dist"
+        }
+    }
+}

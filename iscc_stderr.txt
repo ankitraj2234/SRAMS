@@ -1,0 +1,2 @@
+Error on line 42 in d:\SRAMS\installer\srams-installer.iss: Source file "d:\SRAMS\installer\..\backend\srams-server.exe" does not exist.
+Compile aborted.

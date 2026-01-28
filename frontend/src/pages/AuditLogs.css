@@ -1,0 +1,97 @@
+.audit-page {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-text-secondary);
+}
+
+.filters .input {
+    width: auto;
+    min-width: 150px;
+}
+
+/* Table Adjustments */
+.checkbox-col {
+    width: 40px;
+    text-align: center;
+}
+
+.checkbox-col input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-accent-primary);
+}
+
+.timestamp {
+    font-size: var(--font-size-sm);
+    white-space: nowrap;
+}
+
+.actor-role {
+    text-transform: capitalize;
+}
+
+.ip-cell {
+    font-family: monospace;
+    font-size: var(--font-size-sm);
+}
+
+.metadata {
+    font-size: var(--font-size-xs);
+    background: var(--color-bg-glass);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+tr.deleted {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+/* Delete Modal */
+.warning-text {
+    color: var(--color-warning);
+    margin-bottom: var(--space-lg);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+    .table th:nth-child(5),
+    .table td:nth-child(5),
+    .table th:nth-child(6),
+    .table td:nth-child(6),
+    .table th:nth-child(7),
+    .table td:nth-child(7) {
+        display: none;
+    }
+}

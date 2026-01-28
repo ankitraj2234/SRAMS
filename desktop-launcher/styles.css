@@ -1,0 +1,390 @@
+/* Twilight Theme Updates */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #1a162e;
+    /* Deep Purple Black (Twilight) */
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-height: 100vh;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 12px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.logo-icon {
+    font-size: 42px;
+}
+
+.logo-text h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.logo-text span {
+    font-size: 12px;
+    color: #beb5e0;
+    /* Light Purple Text */
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+}
+
+/* Status Section */
+.status-section {
+    background: #241e42;
+    /* Dark Purple */
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #3d346b;
+    /* Lighter Purple Border */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.status-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Status Dots */
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.status-dot.online {
+    background: #10b981;
+    /* Emerald 500 */
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+.status-dot.offline {
+    background: #ef4444;
+    /* Red 500 */
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}
+
+.status-dot.starting {
+    background: #f59e0b;
+    /* Amber 500 */
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.status-text {
+    font-weight: 500;
+    font-size: 14px;
+    color: #e2e8f0;
+}
+
+/* Fixed: Button Layout Horizontal */
+.status-actions {
+    display: flex;
+    flex-direction: row;
+    /* Force horizontal */
+    gap: 12px;
+}
+
+/* Login Section */
+.login-section,
+.logged-in-section {
+    background: #241e42;
+    /* Dark Purple */
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #3d346b;
+    /* Lighter Purple Border */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #f8fafc;
+}
+
+.section-desc {
+    font-size: 14px;
+    color: #beb5e0;
+    /* Light Purple Text */
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    width: 100%;
+    /* Ensure container handles width */
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    /* Slightly smaller for cleaner look */
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #d16d76;
+    /* Reddish Pink Accent */
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.form-group input {
+    width: 100%;
+    max-width: 100%;
+    /* Prevent overflow */
+    box-sizing: border-box !important;
+    /* Force border-box */
+    padding: 12px 14px;
+    border: 1px solid rgba(61, 52, 107, 0.5);
+    /* Purple border, subtler */
+    border-radius: 6px;
+    /* Tighter radius */
+    background: rgba(26, 22, 46, 0.6);
+    /* Deep bg with transparency */
+    color: #f1f5f9;
+    font-size: 14px;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #d16d76;
+    background: rgba(26, 22, 46, 0.9);
+    box-shadow: 0 0 0 2px rgba(209, 109, 118, 0.15);
+}
+
+.form-group input::placeholder {
+    color: #6355b3;
+    opacity: 0.7;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+.btn-primary {
+    /* Twilight Gradient for Primary Actions */
+    background: linear-gradient(135deg, #564A96 0%, #B75F67 100%);
+    color: #ffffff;
+}
+
+.btn-primary:hover:not(:disabled) {
+    box-shadow: 0 4px 12px rgba(183, 95, 103, 0.3);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #beb5e0;
+    border: 1px solid #3d346b;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: rgba(86, 74, 150, 0.1);
+    color: #f1f5f9;
+    border-color: #6355b3;
+}
+
+.btn-success {
+    background: #2e7d32;
+    /* darker green to match dark theme */
+    color: #fff;
+    flex: 1;
+    /* Equal width */
+}
+
+.btn-success:hover:not(:disabled) {
+    background: #1b5e20;
+}
+
+.btn-danger {
+    background: #c62828;
+    /* darker red */
+    color: #fff;
+    flex: 1;
+    /* Equal width */
+}
+
+.btn-danger:hover:not(:disabled) {
+    background: #b71c1c;
+}
+
+.btn-warning {
+    background: #f57c00;
+    color: #fff;
+    flex: 0.8;
+}
+
+.btn-warning:hover:not(:disabled) {
+    background: #ef6c00;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Error Message */
+.error-message {
+    color: #fca5a5;
+    font-size: 13px;
+    margin-bottom: 16px;
+    padding: 12px;
+    background: rgba(127, 29, 29, 0.3);
+    border-radius: 6px;
+    display: none;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Logged In Section */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3d346b;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #564A96 0%, #B75F67 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 2px;
+}
+
+.user-role {
+    font-size: 13px;
+    color: #beb5e0;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-box {
+    margin-top: 24px;
+    padding: 16px;
+    background: rgba(86, 74, 150, 0.1);
+    /* Purple tint */
+    border-radius: 8px;
+    border: 1px solid rgba(86, 74, 150, 0.2);
+}
+
+.info-box p {
+    font-size: 13px;
+    color: #d8b4fe;
+    /* Light Purple */
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #3d346b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#connectionInfo {
+    font-size: 12px;
+    color: #6355b3;
+}
+
+.version {
+    font-size: 12px;
+    color: #6355b3;
+}
+
+/* Loading state */
+.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.loading::after {
+    content: " ⏳";
+}
