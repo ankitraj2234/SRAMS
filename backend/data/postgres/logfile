@@ -1,0 +1,77 @@
+2026-01-23 18:16:22.309 IST [26312] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2026-01-23 18:16:22.311 IST [26312] LOG:  listening on IPv6 address "::1", port 5432
+2026-01-23 18:16:22.311 IST [26312] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-01-23 18:16:22.329 IST [21964] LOG:  database system was shut down at 2026-01-23 18:14:59 IST
+2026-01-23 18:16:22.336 IST [26312] LOG:  database system is ready to accept connections
+2026-01-23 18:19:35.952 IST [24492] ERROR:  functions in index predicate must be marked IMMUTABLE
+2026-01-23 18:19:35.952 IST [24492] STATEMENT:  CREATE INDEX IF NOT EXISTS idx_users_locked ON srams.users(locked_until)
+	WHERE locked_until IS NOT NULL
+	    AND locked_until > NOW();
+2026-01-23 18:20:37.284 IST [19212] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2026-01-23 18:20:37.288 IST [22364] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:20:37.289 IST [16148] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:21:08.412 IST [14340] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:21:08.414 IST [23908] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:21:08.414 IST [12840] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:21:08.417 IST [3160] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:21:08.418 IST [12764] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:21:22.330 IST [16892] LOG:  checkpoint starting: time
+2026-01-23 18:21:35.393 IST [19560] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:22:36.748 IST [1952] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2026-01-23 18:23:20.398 IST [16892] LOG:  checkpoint complete: wrote 1095 buffers (6.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=118.052 s, sync=0.015 s, total=118.070 s; sync files=392, longest=0.001 s, average=0.001 s; distance=5419 kB, estimate=5419 kB; lsn=0/1AC3088, redo lsn=0/1AC3050
+2026-01-23 18:24:38.002 IST [6184] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:24:38.005 IST [5256] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:24:38.005 IST [14076] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:26:26.450 IST [3948] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:26:26.451 IST [4532] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:26:26.549 IST [16040] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:28:45.627 IST [7924] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:28:45.627 IST [14012] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:31:30.367 IST [12960] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:31:30.367 IST [15828] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:31:30.368 IST [21500] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:31:30.369 IST [26344] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:31:30.370 IST [15956] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:33:31.935 IST [4748] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:33:31.939 IST [7740] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:33:31.939 IST [7340] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:34:35.811 IST [15828] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:35:43.875 IST [23876] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:53:35.237 IST [19976] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-23 18:53:35.237 IST [2652] LOG:  could not receive data from client: An established connection was aborted by the software in your host machine.
+	
+2026-01-24 00:49:05.655 IST [26312] LOG:  server process (PID 27280) was terminated by exception 0xC000013A
+2026-01-24 00:49:05.655 IST [26312] DETAIL:  Failed process was running: -- ping
+2026-01-24 00:49:05.655 IST [26312] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2026-01-24 00:49:05.655 IST [26312] LOG:  terminating any other active server processes
+2026-01-24 00:49:05.662 IST [26312] LOG:  received fast shutdown request
+^C

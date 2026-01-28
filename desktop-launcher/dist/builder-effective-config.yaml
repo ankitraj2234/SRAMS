@@ -1,0 +1,17 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.srams.admin-launcher
+productName: SRAMS Admin
+win:
+  target:
+    - portable
+files:
+  - filter:
+      - main.js
+      - preload.js
+      - index.html
+      - styles.css
+      - renderer.js
+      - app.manifest
+electronVersion: 28.3.3
